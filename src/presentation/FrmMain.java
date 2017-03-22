@@ -3,6 +3,7 @@ package presentation;
 import domaine.Employe;
 import domaine.Lieu;
 import java.util.ArrayList;
+import metier.ListeEmployes;
 
 /**
  * 634.1 Programmation - TP P01
@@ -13,22 +14,31 @@ import java.util.ArrayList;
  * - ouverture de la fenêtre de saisie d'un nouvel employé.
  *
  * @author William PAUCHARD
- * @version 1.0
+ * @author Artrit AJDINI
+ * @version 1.1
  */
 public class FrmMain extends java.awt.Frame {
-  
+    private ListeEmployes listeEmployes; //liste des employes accessible uniquement dans cette classe
+    
     /** Constructeur */
     public FrmMain () {
       initComponents();
       this.setLocationRelativeTo(null);
+      chargerEmployes();
+      btnSupprimer.setEnabled(false);
+      lstEmployes.select(-1);
     } // Constructeur
-
-    private void chargerDonnees ()  {
-        base.EmployeDao.chargerEmployes();
-        ArrayList allEmployes = base.EmployeDao.getAllEmployes();
+    
+    private void chargerEmployes ()  {
+        listeEmployes =  new ListeEmployes(null);
+        for(int i = 0; i < listeEmployes.size(); i++) {
+            lstEmployes.add(listeEmployes.getEmploye(i).toString());
+        }
+        //base.EmployeDao.chargerEmployes();
+      /*  ArrayList allEmployes = base.EmployeDao.getAllEmployes();
         for (int i=0;i<allEmployes.size();i++) {
             lstEmployes.add(((Employe)allEmployes.get(i)).toString());
-        }
+        }*/
     }
   /**
    * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this code. The
@@ -193,9 +203,9 @@ public class FrmMain extends java.awt.Frame {
   }//GEN-LAST:event_formWindowClosing
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        chargerDonnees();
+      /*  chargerDonnees();
         btnSupprimer.setEnabled(false);
-        lstEmployes.select(-1);
+        lstEmployes.select(-1);*/
     }//GEN-LAST:event_formWindowOpened
 
     private void lstEmployesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_lstEmployesItemStateChanged
