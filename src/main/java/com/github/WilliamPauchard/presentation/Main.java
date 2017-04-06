@@ -11,7 +11,8 @@ package presentation;
 public class Main {
   
     public static void main (String[] args) {
-      java.awt.EventQueue.invokeLater(new Runnable() {
+      System.getProperty("user.home");
+	  java.awt.EventQueue.invokeLater(new Runnable() {
         public void run() {new FrmMain().setVisible(true);}
       });
     } // main

@@ -1,5 +1,11 @@
 nbproject/
+
 build/
+
 build.xml
+
 manifest.mf
+
 *.class
+
+target/
