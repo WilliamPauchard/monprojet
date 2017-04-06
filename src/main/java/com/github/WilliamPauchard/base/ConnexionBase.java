@@ -1,4 +1,4 @@
-package base;
+package main.java.com.github.WilliamPauchard.base;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

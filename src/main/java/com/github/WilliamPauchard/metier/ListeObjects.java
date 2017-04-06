@@ -1,4 +1,4 @@
-package metier;
+package main.java.com.github.WilliamPauchard.metier;
 
 import java.util.ArrayList;
 import java.util.Observable;

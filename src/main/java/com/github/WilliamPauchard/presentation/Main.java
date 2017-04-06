@@ -1,4 +1,4 @@
-package presentation;
+package main.java.com.github.WilliamPauchard.presentation;
 
 /**
  * 634.1 Programmation - TP P01

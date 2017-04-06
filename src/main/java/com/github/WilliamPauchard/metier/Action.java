@@ -1,4 +1,4 @@
-package metier;
+package main.java.com.github.WilliamPauchard.metier;
 
 
 public class Action {

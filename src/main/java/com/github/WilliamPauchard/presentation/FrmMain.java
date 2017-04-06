@@ -1,9 +1,9 @@
-package presentation;
+package main.java.com.github.WilliamPauchard.presentation;
 
-import domaine.Employe;
-import domaine.Lieu;
+import main.java.com.github.WilliamPauchard.domaine.Employe;
+import main.java.com.github.WilliamPauchard.domaine.Lieu;
 import java.util.ArrayList;
-import metier.ListeEmployes;
+import main.java.com.github.WilliamPauchard.metier.ListeEmployes;
 
 /**
  * 634.1 Programmation - TP P01
@@ -211,7 +211,7 @@ public class FrmMain extends java.awt.Frame {
     private void lstEmployesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_lstEmployesItemStateChanged
        if (lstEmployes.getSelectedIndex()!=-1){        
            btnSupprimer.setEnabled(true);
-           Employe empl = base.EmployeDao.getEmploye(lstEmployes.getSelectedIndex());
+           Employe empl = main.java.com.github.WilliamPauchard.base.EmployeDao.getEmploye(lstEmployes.getSelectedIndex());
            afficherInfosEmploye(empl);
        }else {
            btnSupprimer.setEnabled(false);
@@ -225,7 +225,7 @@ public class FrmMain extends java.awt.Frame {
 
     private void btnSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSupprimerActionPerformed
         int index = lstEmployes.getSelectedIndex();
-        base.EmployeDao.supprimerEmploye(index);
+        main.java.com.github.WilliamPauchard.base.EmployeDao.supprimerEmploye(index);
         lstEmployes.remove(index);
         champsAJour();
         btnSupprimer.setEnabled(false);

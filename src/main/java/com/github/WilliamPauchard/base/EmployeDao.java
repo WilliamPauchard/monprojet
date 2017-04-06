@@ -1,9 +1,9 @@
-package base;
+package main.java.com.github.WilliamPauchard.base;
 
 import java.sql.PreparedStatement;
-import domaine.Departement;
-import domaine.Employe;
-import domaine.Fonction;
+import main.java.com.github.WilliamPauchard.domaine.Departement;
+import main.java.com.github.WilliamPauchard.domaine.Employe;
+import main.java.com.github.WilliamPauchard.domaine.Fonction;
 import java.sql.Connection;
 import java.util.Date;
 import java.sql.ResultSet;
@@ -68,7 +68,7 @@ public class EmployeDao {
         Employe emp = (Employe) allEmploye.get(index);
         allEmploye.remove(index);
         try {
-            Connection con = base.ConnexionBase.connect(base.ConnexionBase.getNomBase());
+            Connection con = main.java.com.github.WilliamPauchard.base.ConnexionBase.connect(main.java.com.github.WilliamPauchard.base.ConnexionBase.getNomBase());
             PreparedStatement statement = con.prepareStatement("DELETE FROM employe where NoEmpl=? ");
             statement.setInt(1, emp.getNoEmpl());
             statement.execute();
@@ -99,7 +99,7 @@ public class EmployeDao {
 
     private static void insererDansLaBdd( String nomEmp, String prenomEmp, Fonction fct, Date date, Departement dept) {
         try {
-            Connection con = base.ConnexionBase.connect(base.ConnexionBase.getNomBase());
+            Connection con = main.java.com.github.WilliamPauchard.base.ConnexionBase.connect(main.java.com.github.WilliamPauchard.base.ConnexionBase.getNomBase());
             PreparedStatement statement = con.prepareStatement("INSERT INTO employe (nomEmpl,PrenomEmpl,NoFonc,DateEmpl,NoDept) VALUES (?, ?, ?, ?, ?)");
             statement.setString(1,nomEmp);
             statement.setString(2,prenomEmp);

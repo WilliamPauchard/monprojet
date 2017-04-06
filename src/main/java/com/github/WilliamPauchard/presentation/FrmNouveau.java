@@ -1,6 +1,6 @@
-package presentation;
+package main.java.com.github.WilliamPauchard.presentation;
 
-import domaine.Employe;
+import main.java.com.github.WilliamPauchard.domaine.Employe;
 import java.awt.Choice;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -154,8 +154,8 @@ public class FrmNouveau extends java.awt.Frame {
     }//GEN-LAST:event_formWindowClosing
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        chargerDonnees(base.DepartementsDao.getAllDepartement(), chDepartements);
-        chargerDonnees(base.FonctionsDao.getAllFonctions(), chFonctions);
+        chargerDonnees(main.java.com.github.WilliamPauchard.base.DepartementsDao.getAllDepartement(), chDepartements);
+        chargerDonnees(main.java.com.github.WilliamPauchard.base.FonctionsDao.getAllFonctions(), chFonctions);
     }//GEN-LAST:event_formWindowOpened
 
     private void btnEnregistrerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnregistrerActionPerformed
@@ -163,8 +163,8 @@ public class FrmNouveau extends java.awt.Frame {
         String prenom =tfPrenom.getText();
         String date = tfDateEngagement.getText();
         if (checkerChamps(nom,prenom,date)){
-            int index = base.EmployeDao.insererEmploye(nom,prenom,date,chFonctions.getSelectedIndex(),chDepartements.getSelectedIndex());
-            frmMain.addEmploye(index,base.EmployeDao.getEmploye(index).toString());
+            int index = main.java.com.github.WilliamPauchard.base.EmployeDao.insererEmploye(nom,prenom,date,chFonctions.getSelectedIndex(),chDepartements.getSelectedIndex());
+            frmMain.addEmploye(index,main.java.com.github.WilliamPauchard.base.EmployeDao.getEmploye(index).toString());
             this.dispose();
         }
     }//GEN-LAST:event_btnEnregistrerActionPerformed

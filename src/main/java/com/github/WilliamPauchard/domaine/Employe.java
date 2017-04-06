@@ -1,4 +1,4 @@
-package domaine;
+package main.java.com.github.WilliamPauchard.domaine;
 
 import java.sql.PreparedStatement;
 import java.sql.Connection;
@@ -78,7 +78,7 @@ public class Employe implements Comparable {
 
     public static int getNouveauNoEmpl() {
         try {
-            Connection conn = base.ConnexionBase.connect(base.ConnexionBase.getNomBase());
+            Connection conn = main.java.com.github.WilliamPauchard.base.ConnexionBase.connect(main.java.com.github.WilliamPauchard.base.ConnexionBase.getNomBase());
             PreparedStatement statement = conn.prepareStatement("SELECT MAX(NoEmpl)AS 'Numero' from employe");
             ResultSet resultset = statement.executeQuery();
             resultset.next();

@@ -1,7 +1,7 @@
-package base;
+package main.java.com.github.WilliamPauchard.base;
 
-import domaine.Departement;
-import domaine.Lieu;
+import main.java.com.github.WilliamPauchard.domaine.Departement;
+import main.java.com.github.WilliamPauchard.domaine.Lieu;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;

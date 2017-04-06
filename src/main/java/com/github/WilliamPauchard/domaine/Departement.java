@@ -1,4 +1,4 @@
-package domaine;
+package main.java.com.github.WilliamPauchard.domaine;
 
 /**
  *

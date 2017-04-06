@@ -1,7 +1,7 @@
-package base;
+package main.java.com.github.WilliamPauchard.base;
 
 import java.sql.PreparedStatement;
-import domaine.Fonction;
+import main.java.com.github.WilliamPauchard.domaine.Fonction;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

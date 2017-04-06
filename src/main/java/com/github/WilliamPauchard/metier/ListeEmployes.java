@@ -1,8 +1,8 @@
 
-package metier;
+package main.java.com.github.WilliamPauchard.metier;
 
-import base.EmployeDao;
-import domaine.Employe;
+import main.java.com.github.WilliamPauchard.base.EmployeDao;
+import main.java.com.github.WilliamPauchard.domaine.Employe;
 import java.util.Observer;
 
 /**

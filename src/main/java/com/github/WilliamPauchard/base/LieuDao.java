@@ -1,6 +1,6 @@
-package base;
+package main.java.com.github.WilliamPauchard.base;
 
-import domaine.Lieu;
+import main.java.com.github.WilliamPauchard.domaine.Lieu;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

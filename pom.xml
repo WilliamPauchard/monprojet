@@ -4,5 +4,39 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>com.github.WilliamPauchard</groupId>
    <artifactId>TP01-Java</artifactId>
-   <version>0.0.2-SNAPSHOT</version>
+   <version>0.0.3-SNAPSHOT</version>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>main.java.com.github.WilliamPauchard.presentation.Main</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-utils</artifactId>
+      <version>1.1</version>
+    </dependency>
+	<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+	<dependency>
+    		<groupId>joda-time</groupId>
+    		<artifactId>joda-time</artifactId>
+    		<version>2.9.9</version>
+	</dependency>
+  </dependencies>
 </project>
